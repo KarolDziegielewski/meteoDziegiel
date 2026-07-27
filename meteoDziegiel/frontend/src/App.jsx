@@ -64,7 +64,7 @@ function App() {
 
   return (
     <div className="dashboard-container">
-      <h1>Stacja Meteorologiczna ESP8266</h1>
+      <h1>Stacja Meteorologiczna MeteoDzięgiel</h1>
       
       {/* KAFELKI Z AKTUALNYMI DANYMI */}
       <div className="cards-grid">
@@ -134,7 +134,7 @@ function App() {
         </div>
 
         <div className="chart-box">
-          <h2>Jakość Powietrza (Surowe j.u.)</h2>
+          <h2>Jakość Powietrza</h2>
           <div style={{ width: '100%', height: 250 }}>
             <ResponsiveContainer>
               <LineChart data={historyData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
