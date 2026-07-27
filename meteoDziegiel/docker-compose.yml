@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: meteo_flask
+    restart: unless-stopped      # Kontener wstanie sam po restarcie serwera
+    ports:
+      - "5000:5000"              # Port dla ESP8266
+    volumes:
+      - ./backend/data:/app/data # Mapowanie dysku, żeby baza nie zniknęła po restarcie kontenera
+
+  frontend:
+    build: ./frontend
+    container_name: meteo_react
+    restart: unless-stopped
+    ports:
+      - "80:80"                  # React serwowany na domyślnym porcie HTTP
+    depends_on:
+      - backend                  # Frontend uruchamia się po backendzie

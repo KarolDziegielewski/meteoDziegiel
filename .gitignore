@@ -1,0 +1,10 @@
+# Node.js
+node_modules/
+dist/
+
+# Python i baza danych
+__pycache__/
+backend/data/
+
+# Pliki systemowe
+.DS_Store
