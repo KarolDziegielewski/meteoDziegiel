@@ -34,7 +34,8 @@ function App() {
         
         // Dopasowanie wyświetlania daty zależnie od skali czasu
         const formattedHistory = historyRes.data.map(item => {
-          const date = new Date(item.timestamp);
+         // Zamieniamy spację na 'T' i dodajemy 'Z' na końcu (standard ISO 8601 dla UTC)
+const date = new Date(item.timestamp.replace(" ", "T") + "Z");
           const timeFormat = timeRange === 24 
             ? date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) // Np. "14:30"
             : date.toLocaleString([], { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); // Np. "15.08 14:30"
