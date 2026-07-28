@@ -9,22 +9,12 @@
 h1 {
   text-align: center;
   margin-bottom: 30px;
-  line-height: 1.3; /* Zwiększa odstęp między linijkami, żeby na siebie nie wchodziły */
+  line-height: 1.3;
+  /* Nowe właściwości ratujące długie słowa na komórkach: */
+  word-break: break-word; 
+  hyphens: auto; 
+  padding: 0 10px; 
 }
-
-/* Reguła tylko dla małych ekranów (telefonów) */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.5rem; /* Zmniejsza czcionkę na komórkach */
-    margin-bottom: 20px;
-  }
-  
-  /* Przy okazji możemy sprawić, że przyciski ładnie ułożą się na telefonie */
-  .controls {
-    flex-direction: column;
-  }
-}
-
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
