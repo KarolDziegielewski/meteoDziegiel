@@ -65,7 +65,7 @@ const date = new Date(item.timestamp.replace(" ", "T") + "Z");
 
   return (
     <div className="dashboard-container">
-      <h1>Stacja Meteorologiczna MeteoDzięgiel</h1>
+      <h1>Stacja MeteoDzięgiel</h1>
       
       {/* KAFELKI Z AKTUALNYMI DANYMI */}
       <div className="cards-grid">
